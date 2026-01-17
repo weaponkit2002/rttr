@@ -47,6 +47,12 @@ struct associative_container_mapper;
 template<typename T>
 struct sequential_container_mapper;
 
+template<typename T, size_t align = sizeof(T)>
+struct aligned_storage
+{
+	alignas(align) char buf[sizeof(T)];
+};
+
 namespace detail
 {
     struct derived_info;
