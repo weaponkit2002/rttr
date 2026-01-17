@@ -47,10 +47,10 @@ struct associative_container_mapper;
 template<typename T>
 struct sequential_container_mapper;
 
-template<typename T, size_t align = sizeof(T)>
+template<size_t size, size_t align = size>
 struct aligned_storage
 {
-	alignas(align) char buf[sizeof(T)];
+	alignas(align) char buf[size];
 };
 
 namespace detail
