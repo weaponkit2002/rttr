@@ -48,7 +48,7 @@ using variant_t = remove_cv_t<remove_reference_t<T>>;
 /////////////////////////////////////////////////////////////////////////////////////////
 
 RTTR_INLINE variant::variant()
-:   m_policy(&detail::variant_data_policy_empty::invoke)
+:   m_policy(&detail::variant_data_policy_empty::invoke),
 	m_data()
 {
 }
